@@ -6,25 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HTML5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- width：控制 viewport 的大小，可以指定的一个值，如果 600，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。
+        height：和 width 相对应，指定高度。
+        initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。
+        maximum-scale：允许用户缩放到的最大比例。
+        minimum-scale：允许用户缩放到的最小比例。
+        user-scalable：用户是否可以手动缩放 -->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <style>
-    body{
-        display: grid;
-    }
-    header{
-    }
+        body {
+            /* 当元素设置网格布局时,column,float,clear, vertical-align属性无效 */
+            display: grid;
+            grid-template: 200px auto 200px/7fr  3fr;
+            grid-template-areas: "header header header" "main main aside" "footer footer footer";
+            justify-items: center;
+            align-items: center;
+            place-items:center;
+
+        }
+
+        header {
+
+        }
     </style>
 </head>
 
 <body>
     <!-- todo  html常用标签,html5新内容,grid布局
     https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_element_list
-    https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5#语义
+    https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5
     -->
-    <header>html5 新内容 </header>
-    <nav>nav</nav>
-    <main>
+    <header>html5 新内容 <nav>nav</nav></header>
+    
+    <main>main
         <article>
             <header>文章的 Header</header>
             <figure>
